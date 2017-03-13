@@ -1,0 +1,31 @@
+.search-form {
+    .heading {
+        font-weight: bold;
+    }
+    .filters {
+        .filter {
+            display: flex;
+            flex: 1 1 0;
+            align-items: center;
+            margin: 5px;
+            label {
+                margin-right: 10px;
+                width: 50px
+            }
+            input {
+                width: 300px;
+                border: 1px solid #ccc;
+                transition: all .2s ease-in-out;
+                padding: 8px 10px;
+                &:active,
+                &:focus {
+                    outline: none;
+                    border: 1px solid #999;
+                }
+            }
+        }
+    }
+    label {
+        margin-right: 10px;
+    }
+}
