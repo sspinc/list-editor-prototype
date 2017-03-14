@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css';
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -16,13 +17,37 @@ body {
     font-family: @font-family-base;
     font-weight: @font-weight-base;
     a {
-       color: @color-text; 
+        color: @color-text;
     }
 }
 
 body {
-    max-width: @break-large;
     margin: 0 auto;
     padding: 0;
     position: relative;
+    @media screen and (max-width: 800px){
+        &:after {
+            content: "Visit website on larger screen or increase window size!";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+        }
+        #app {
+            display: none;
+        }
+    }
+    #app {
+        height: 100%;
+        > .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
