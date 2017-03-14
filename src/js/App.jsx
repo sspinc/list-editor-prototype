@@ -6,7 +6,10 @@ import ItemList from './item-list/ItemList.jsx';
 class App extends React.Component {
   render() {
     return <div className='container'>
-             <SearchForm {...this.props.searchForm}/>
+             <div id="controls">
+               <SearchForm {...this.props.searchForm}/>
+               <div className="promoted-items-controls"></div>
+             </div>
              <div id="main-content">
                <ItemList {...this.props.searchResults} role='search' />
                <ItemList {...this.props.promotedItems} role='promoted' />

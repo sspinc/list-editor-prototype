@@ -1,31 +1,44 @@
 .search-form {
-    .heading {
-        font-weight: bold;
-    }
-    .filters {
-        .filter {
-            display: flex;
-            flex: 1 1 0;
-            align-items: center;
-            margin: 5px;
-            label {
-                margin-right: 10px;
-                width: 50px
-            }
-            input {
-                width: 300px;
-                border: 1px solid #ccc;
-                transition: all .2s ease-in-out;
-                padding: 8px 10px;
-                &:active,
-                &:focus {
-                    outline: none;
-                    border: 1px solid #999;
-                }
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    .filter {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        height: 100px; 
+       input {
+            border: 1px solid #ccc;
+            border-right: none !important;
+            transition: all .2s ease-in-out;
+            padding: 8px;
+            height: @height-search-input;
+            line-height: 38px;
+            font-size: 18px;
+            width: 100%;
+            &:active,
+            &:focus {
+                outline: none;
+                border: 1px solid #999;
             }
         }
     }
-    label {
-        margin-right: 10px;
+    button {
+        height: @height-search-input;
+        width: @height-search-input;
+        border: none;
+        background-color: @color-secondary;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+        &:after {
+            content: "\f002";
+            font-family: FontAwesome;
+            color: white;
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: darken(@color-secondary, 10%);
+        }
     }
 }

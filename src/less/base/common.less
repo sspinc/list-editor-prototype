@@ -23,9 +23,10 @@ body {
 
 body {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 20px;
     position: relative;
-    @media screen and (max-width: 800px){
+    opacity: 1 !important;
+    @media screen and (max-width: 800px) {
         &:after {
             content: "Visit website on larger screen or increase window size!";
             display: flex;
@@ -36,7 +37,6 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
-            
         }
         #app {
             display: none;
