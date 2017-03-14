@@ -1,18 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SearchForm from './search-form/SearchForm.jsx';
+import PromotedItemControls from './promoted-item-controls/PromotedItemControls.jsx';
 import ItemList from './item-list/ItemList.jsx';
 
 class App extends React.Component {
   render() {
     return <div className='container'>
              <div id="controls">
-               <SearchForm {...this.props.searchForm}/>
-               <div className="promoted-items-controls"></div>
+               <SearchForm />
+               <PromotedItemControls />
              </div>
              <div id="main-content">
-               <ItemList {...this.props.searchResults} role='search' />
-               <ItemList {...this.props.promotedItems} role='promoted' />
+               <ItemList {...this.props.searchResults} title='Search results' />
+               <ItemList {...this.props.promotedItems} title='Eligible items' />
              </div>
            </div>;
   }

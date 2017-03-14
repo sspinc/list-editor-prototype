@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css';
 *,
 *:before,
@@ -23,7 +23,7 @@ body {
 
 body {
     margin: 0 auto;
-    padding: 0 0 20px;
+    padding: 20px 4px;
     position: relative;
     opacity: 1 !important;
     @media screen and (max-width: 800px) {
@@ -49,5 +49,16 @@ body {
             display: flex;
             flex-direction: column;
         }
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    padding: 0 15px;
+    &:active,
+    &:focus {
+        outline: none;
     }
 }

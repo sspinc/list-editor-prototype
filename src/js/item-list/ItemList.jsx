@@ -6,11 +6,16 @@ export default class ItemhList extends React.Component {
     const items = [];
 
     for (const item of this.props.items) {
-      items.push(<ListItem key={item.id} {...item}/>);
+      items.push(<ListItem key={ item.id } {...item}/>);
     }
 
     return <div className='item-list'>
-             { items }
+             <div className='header'>
+               { `${this.props.title} (${this.props.items.length})` }
+             </div>
+             <div className='item-container'>
+                { items }
+             </div>
            </div>;
   }
 }

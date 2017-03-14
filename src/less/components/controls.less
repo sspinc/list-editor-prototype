@@ -3,8 +3,73 @@
     display: flex;
     align-items: stretch;
     flex: 0 0 auto;
-    > div {
-      flex: 1 1 0;
-
+    padding-bottom: 10px;
+    .search-form {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        .filter {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            input {
+                border: 1px solid #ddd;
+                border-right: none !important;
+                transition: all .2s ease-in-out;
+                padding: 8px;
+                height: @height-search-input;
+                line-height: 38px;
+                font-size: 120%;
+                width: 100%;
+                box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px -5px;
+                &:active,
+                &:focus {
+                    outline: none;
+                    border: 1px solid #999;
+                }
+            }
+        }
+        button {
+            height: @height-search-input;
+            width: @height-search-input;
+            border: none;
+            background-color: @color-btn-primary;
+            cursor: pointer;
+            transition: background-color .2s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px -5px;
+            &:after {
+                content: "\f002";
+                font-family: FontAwesome;
+                color: white;
+                font-size: 120%;
+            }
+            &:hover {
+                background-color: darken(@color-btn-primary, 5%);
+            }
+        }
+    }
+    .promoted-item-controls {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4px;
+        button {
+            height: @height-search-input;
+            line-height: @height-search-input;
+            font-size: 110%;
+            margin-left: 8px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px -5px;
+        }
+        button#remove-all {
+            background-color: #ff7272;
+            color: white;
+        }
+        button#remove-sold-out {
+          background-color: white;
+          border: 1px solid #ff7272;
+          color: #ff7272;
+        }
     }
 }
